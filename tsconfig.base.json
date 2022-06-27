@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "incremental": true
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -14,6 +15,20 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "noImplicitAny": true,
+    "strictFunctionTypes": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true,
+    "strictNullChecks": true,
     "paths": {
       "@reftracker/data": ["packages/data/src/index.ts"]
     }
