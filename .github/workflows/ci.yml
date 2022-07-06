@@ -10,6 +10,7 @@ jobs:
     name: Nx Cloud - Main Job
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.5
     with:
+      main-branch-name: develop
       number-of-agents: 3
       parallel-commands: |
         npx nx-cloud record -- npx nx workspace-lint
