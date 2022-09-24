@@ -10,16 +10,35 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
     "eslint-config-custom": "workspace:*",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "latest",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "apps/**/*.{js,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/apps/**/*.{js,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
   "packageManager": "pnpm@7.11.0"
 }
