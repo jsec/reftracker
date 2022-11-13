@@ -1,7 +1,11 @@
 module.exports = {
-  extends: ["next", "turbo", "prettier"],
-  rules: {
-    "@next/next/no-html-link-for-pages": "off",
-    "react/jsx-key": "off",
-  },
+    extends: ['turbo', 'standard-with-typescript'],
+    parser: '@typescript-eslint/parser',
+    rules: {
+        'react/jsx-key': 'off',
+        'comma-dangle': ['error', 'never'],
+        semi: ['error', 'always'],
+        '@typescript-eslint/semi': ['error', 'always'],
+        '@typescript-eslint/indent': 'off'
+    }
 };
